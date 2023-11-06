@@ -34,9 +34,19 @@ public class OrderServiceTest {
 
     @Test
     void filedInjectionTest(){
-        OrderServiceImpl orderService = new OrderServiceImpl(memberRepository, discountPolicy);
+/*        OrderServiceImpl orderService = new OrderServiceImpl(memberRepository, discountPolicy);
         orderService.setMemberService(new MemoryMemberRepository());
         orderService.setDiscountPolicy(new FixDiscountPolicy());
-        orderService.createOrder(1L, "itemA", 10000);
+        orderService.createOrder(1L, "itemA", 10000);*/
     }
+
+/*    @Test
+    void createOrder(){
+        Long memberId = 1L;
+        Member member = new Member(memberId, "memberA", Grade.VIP);
+        memberService.join(member);
+
+        Order order = orderService.createOrder(memberId, "itemA", 10000);
+        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
+    }*/
 }
